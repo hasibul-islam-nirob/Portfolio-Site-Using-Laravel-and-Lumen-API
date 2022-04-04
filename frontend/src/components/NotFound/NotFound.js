@@ -1,5 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
+import notFound from '../../asset/images/notFoundimg.jpg';
 
 class NotFound extends Component {
     render() {
@@ -8,7 +9,7 @@ class NotFound extends Component {
                 <Container className="notFoundSection text-center" >
                     <Row>
                         <Col>
-                            <h1 className="notFoundTitle" >404 | Not Found</h1>
+                            <img className="notFoundImg" src={notFound} alt=""/>
                         </Col>
                     </Row>
                 </Container>

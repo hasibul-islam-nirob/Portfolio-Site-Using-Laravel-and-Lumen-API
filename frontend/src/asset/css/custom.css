@@ -117,7 +117,7 @@ Services Part
 Navigation or Menu Part
  */
 .siteLogo{
-    width: 150px;
+    width: 140px;
 }
 .navTitle{
     font-family: 'montserreat',sans-serif;
@@ -153,7 +153,7 @@ Navigation or Menu Part
     font-family: 'montserreat',sans-serif;
     font-weight: 400;
     color: #ffffff ;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .navItemScroll{
@@ -161,7 +161,7 @@ Navigation or Menu Part
     font-family: 'montserreat',sans-serif;
     font-weight: 400;
     color: #1c1c1c;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 /*
@@ -521,6 +521,9 @@ Not Found
     font-size: 48px;
     font-weight: 600;
     margin-top: 5rem;
+}
+.notFoundImg{
+    width: 500px;
 }
 
 /*
