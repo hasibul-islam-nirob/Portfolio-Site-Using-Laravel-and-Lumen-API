@@ -51,8 +51,8 @@ class TopNavigation extends Component {
                             <Nav.Link> <NavLink exact activeStyle={{color:'#00a8ee'}} className={this.state.navItems} to="/service">Services</NavLink> </Nav.Link>
                             <Nav.Link> <NavLink exact activeStyle={{color:'#00a8ee'}} className={this.state.navItems} to="/course">Courses</NavLink> </Nav.Link>
                             <Nav.Link> <NavLink exact activeStyle={{color:'#00a8ee'}} className={this.state.navItems} to="/portfolio">Portfolio</NavLink> </Nav.Link>
-                            <Nav.Link> <NavLink exact activeStyle={{color:'#00a8ee'}} className={this.state.navItems} to="/contact">Contact</NavLink> </Nav.Link>
                             <Nav.Link> <NavLink exact activeStyle={{color:'#00a8ee'}} className={this.state.navItems} to="/about">About</NavLink> </Nav.Link>
+                            <Nav.Link> <NavLink exact activeStyle={{color:'#00a8ee'}} className={this.state.navItems} to="/contact">Contact</NavLink> </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
