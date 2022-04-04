@@ -80,9 +80,9 @@ class ContactForm extends Component {
 
                         <Col lg={6} md={6} sm={12}>
                             <h1 className="contactFormTitle" >Discussion Any Time</h1>
-                            <p className="contactFormDesc" ><FontAwesomeIcon icon={faHome} /> 177 Tejkuni Para, Tejgaon. Dhaka-1215</p>
-                            <p className="contactFormDesc" ><FontAwesomeIcon icon={faEnvelope} /> hasibolislamnirob@gmail.com</p>
-                            <p className="contactFormDesc" ><FontAwesomeIcon icon={faPhone} /> +8801819979441</p>
+                            <p className="contactFormDesc" ><FontAwesomeIcon icon={faHome} />  177 Tejkuni Para, Tejgaon. Dhaka-1215</p>
+                            <p className="contactFormDesc" ><FontAwesomeIcon icon={faEnvelope} />  contact@hinirob.com </p>
+                            <p className="contactFormDesc" ><FontAwesomeIcon icon={faPhone} />  +8801819979441</p>
                         </Col>
 
                     </Row>

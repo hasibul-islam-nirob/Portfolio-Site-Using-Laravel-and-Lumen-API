@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faFacebook, faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {faFacebook, faGithub, faLinkedin, faYoutube} from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope, faPhone, faHome} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 
@@ -15,14 +15,15 @@ class Footer extends Component {
                             <h1 className="footerMainTitle" >Follow</h1>
                             <Link className="footerDescLink" to=""> <FontAwesomeIcon icon={faFacebook} /> FaceBook</Link> <br/>
                             <Link className="footerDescLink" to=""> <FontAwesomeIcon icon={faLinkedin} /> Linkedin</Link><br/>
-                            <Link className="footerDescLink" to=""> <FontAwesomeIcon icon={faGithub} /> GitHub</Link>
+                            <Link className="footerDescLink" to=""> <FontAwesomeIcon icon={faGithub} /> GitHub</Link><br/>
+                            <Link className="footerDescLink" to=""> <FontAwesomeIcon icon={faYoutube} /> Youtube</Link>
                         </Col>
 
                         <Col lg={3} md={6} sm={12} className="p-3 text-justify " >
                             <h1 className="footerMainTitle" >Address</h1>
-                            <p className="footerAddressDesc" ><FontAwesomeIcon icon={faHome} /> 177 Tejkuni Para, Tejgaon. Dhaka-1215</p>
-                            <p className="footerAddressDesc" ><FontAwesomeIcon icon={faEnvelope} /> hasibolislamnirob@gmail.com</p>
-                            <p className="footerAddressDesc" ><FontAwesomeIcon icon={faPhone} /> +8801819979441</p>
+                            <p className="footerAddressDesc" ><FontAwesomeIcon icon={faHome} />  177 Tejkuni Para, Tejgaon. Dhaka-1215</p>
+                            <p className="footerAddressDesc" ><FontAwesomeIcon icon={faEnvelope} />  contact@hinirob.com</p>
+                            <p className="footerAddressDesc" ><FontAwesomeIcon icon={faPhone} />  +8801819979441</p>
                         </Col>
 
                         <Col lg={3} md={6} sm={12} className="p-3 text-justify " >

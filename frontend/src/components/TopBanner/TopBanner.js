@@ -14,7 +14,7 @@ class TopBanner extends Component {
                                 <Row>
                                     <Col className="text-center">
                                         <h1 className="topTittle" > Hasibul Islam Nirob </h1>
-                                        <h3 className="topSubTittle">Full Stack Web Developer</h3>
+                                        <h3 className="topSubTittle">Software Engineer</h3>
                                         <Button variant="primary"><Link className="linkButton" to="/contact"> Contact Me</Link></Button>
                                     </Col>
                                 </Row>
