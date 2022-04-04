@@ -1,9 +1,50 @@
 import React, {Component, Fragment} from 'react';
 import {Button, Col, Container, Form, Row} from "react-bootstrap";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEnvelope, faHome, faPhone} from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope, faExclamationCircle, faHome, faPhone} from "@fortawesome/free-solid-svg-icons";
 
 class ContactForm extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            fAddress:"",
+            fMail:" ",
+            fMobile:" ",
+            buttonName:"Send",
+            nameEr:"",
+            emailEr:"",
+            msgEr:"",
+            loading:true,
+            error:false,
+
+            errorIconName:"contactError d-none",
+            errorIconEmail:"contactError d-none",
+        }
+    };
+
+    onFormFormat=()=>{
+        let nameVal  = document.getElementById("name").value;
+        let emailVal  = document.getElementById("email").value;
+
+        if (nameVal.length > 0){
+            let nameValidation=/^([a-zA-Z ]){2,20}$/;
+            if(!nameValidation.test(nameVal)){
+                this.setState({nameEr:"Name Isn't Valid", errorIconName:"contactError"});
+            }else{
+                this.setState({nameEr:" ", errorIconName:"contactError d-none"});
+            }
+        }
+        if(emailVal.length > 0){
+            let mailValidation=/\S+@\S+\.\S+/;
+            if(!mailValidation.test(emailVal)){
+                this.setState({emailEr:"Mail Isn't Valid", errorIconEmail:"contactError"});
+            }else{
+                this.setState({emailEr:" ",  errorIconEmail:"contactError d-none"});
+            }
+        }
+
+    }
+
     render() {
         return (
             <Fragment>
@@ -16,17 +57,19 @@ class ContactForm extends Component {
                             <Form>
                                 <Form.Group>
                                     <Form.Label className="contactFormSubTitle" >Your Name</Form.Label>
-                                    <Form.Control type="text" placeholder="Your Name" />
+                                    <Form.Control onChange={this.onFormFormat} id="name" type="text" placeholder="Your Name" />
+                                    <p className="errorIcon" > <FontAwesomeIcon className={this.state.errorIconName} icon={faExclamationCircle}/>  {this.state.nameEr}</p>
                                 </Form.Group>
 
                                 <Form.Group>
                                     <Form.Label className="contactFormSubTitle" >Email Address</Form.Label>
-                                    <Form.Control type="email" placeholder="Your Email" />
+                                    <Form.Control onChange={this.onFormFormat} id="email" type="email" placeholder="Your Email" />
+                                    <p className="errorIcon" ><FontAwesomeIcon className={this.state.errorIconEmail} icon={faExclamationCircle}/>  {this.state.emailEr}</p>
                                 </Form.Group>
 
                                 <Form.Group>
                                     <Form.Label className="contactFormSubTitle" >Massage</Form.Label>
-                                    <Form.Control  as="textarea" rows={4} />
+                                    <Form.Control id="msg" as="textarea" rows={4} />
                                 </Form.Group>
 
                                 <Button variant="primary" type="submit">

@@ -74,11 +74,43 @@ Services Part
     font-weight: 600;
 }
 .serviceDescription{
-    color: #1c1c1c;
+    color: #848484;
     margin-top: 1rem;
     font-family: 'raleway',sans-serif;
     font-size: 16px;
     font-weight: 400;
+}
+
+.serviceCard{
+    margin: 5px 5px 5px 5px;
+    height: 22rem;
+    padding: 40px 30px 40px 30px;
+    box-shadow: 0 0 4px 0 rgba(0, 115, 230, 0.5);
+}
+.serviceCard:hover{
+    box-shadow: 0 0 10px 0 rgba(0, 115, 230, 0.5);
+}
+.sectionTitle{
+    color: #0073E6;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    font-family: 'PT Sans Caption', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+}
+.sectionTitleDesc{
+    color: #5e5b5b;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    font-size: 16px;
+}
+.servicesName{
+    margin-top: 1rem;
+}
+
+.servicesImg{
+    width: 100px;
 }
 
 /*
@@ -465,12 +497,17 @@ Contact Form Section
     box-shadow: 0 0 4px 0 rgba(0, 115, 230, 0.2) !important;
 }
 
+.errorIcon{
+    color: #f32020;
+}
+
 /*
 All Services Section
  */
 .allServicesSection{
     margin-top: 5rem;
 }
+
 
 /*
 Not Found
