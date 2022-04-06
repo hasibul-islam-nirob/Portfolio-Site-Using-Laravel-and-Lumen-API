@@ -24,6 +24,7 @@ class HomePage extends Component {
                 <Analysis/>
                 <Summary/>
                 <RecentProject/>
+                <Courses/>
                 <Video/>
                 <ClientReview/>
                 <Footer/>

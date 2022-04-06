@@ -13,6 +13,25 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+// ============  Chart Data Routing Start ==================
+$router->get('/chartData','ChartDataController@onAllSelect');
+
+// ============  Chart Data Routing End ==================
+
+
+// ============  Contact Routing Start ==================
+$router->post('/contactSend','ContactTableController@onContactSend');
+
+// ============  Contact Routing End ==================
+
+
+// ============ Course Routing Start ==================
+$router->get('/courseHome','CourseTableController@onSelectFour');
+$router->get('/courseAll','CourseTableController@onSelectAll');
+$router->post('/courseDetails','CourseTableController@onSelectDetails');
+// ============ Course Routing End ==================
+
+
+// ============  Client Review Data Routing Start ==================
+$router->get('/','ChartDataController@onAllSelect');
+// ============  Client Review Data Routing End ==================
