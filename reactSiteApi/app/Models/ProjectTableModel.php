@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProjectTableModel extends Model
 {
-    public $table = "products";
+    public $table = "projects";
     public $primaryKey = "id";
     public $incrementing = true;
     public $keyType = "int";
