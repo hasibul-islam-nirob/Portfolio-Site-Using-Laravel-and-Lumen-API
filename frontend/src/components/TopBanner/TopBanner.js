@@ -2,8 +2,29 @@ import React, {Component, Fragment} from 'react';
 
 import {Col, Container, Row,Button} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import RestGetClient from "../../RestApi/RestClient";
+import AppURL from "../../RestApi/AppUrl";
 
 class TopBanner extends Component {
+
+    constructor() {
+        super();
+        this.state={
+            title:"",
+            subTitle:""
+        }
+    }
+
+    componentDidMount() {
+        RestGetClient.GetRequest(AppURL.homeTitleSubTitle)
+            .then(result=>{
+                this.setState({
+                    title:result[0]['top_baner_title'],
+                    subTitle:result[0]['top_baner_sub_title']
+                });
+            })
+    }
+
     render() {
         return (
             <div>
@@ -13,8 +34,8 @@ class TopBanner extends Component {
                             <Container className="topContent">
                                 <Row>
                                     <Col className="text-center">
-                                        <h1 className="topTittle" > Hasibul Islam Nirob </h1>
-                                        <h3 className="topSubTittle">Software Engineer</h3>
+                                        <h1 className="topTittle" >{this.state.title}</h1>
+                                        <h3 className="topSubTittle">{this.state.subTitle}</h3>
                                         <Button variant="primary"><Link className="linkButton" to="/contact"> Contact Me</Link></Button>
                                     </Col>
                                 </Row>

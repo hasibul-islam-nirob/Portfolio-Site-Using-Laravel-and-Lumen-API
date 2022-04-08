@@ -37,6 +37,11 @@
       <recent name="G:\React-JS-Projects\Portfolio-Site-Using-Laravel-and-Lumen-API\frontend\public" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="App Debug" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,11 +50,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649051623358</updated>
-      <workItem from="1649051624950" duration="14812000" />
+      <workItem from="1649051624950" duration="40721000" />
+      <workItem from="1649412301091" duration="927000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/frontend$App_Debug.dat" NAME="App Debug Coverage Results" MODIFIED="1649370522017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
