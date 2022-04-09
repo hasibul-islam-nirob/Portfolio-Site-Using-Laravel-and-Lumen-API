@@ -1,9 +1,8 @@
 import React, {Component, Fragment} from 'react';
-//import "../../asset/css/bootstrap.min.css";
 import {Col, Container, Row} from "react-bootstrap";
 import {Bar, BarChart, ResponsiveContainer, Tooltip, XAxis} from "recharts";
-import RestClient from "../../RestApi/RestClient";
-import AppUrl from "../../RestApi/AppUrl";
+import RestGetClient from "../../RestApi/RestClient";
+import AppURL from "../../RestApi/AppUrl";
 
 
 class Analysis extends Component {
@@ -21,8 +20,17 @@ class Analysis extends Component {
                 {Technology:'C#', Project:30},
                 {Technology:'BootStrap', Project:95}
             ],
-            subTitle:""
+            techDescription:""
         }
+    }
+
+    componentDidMount() {
+        RestGetClient.GetRequest(AppURL.techDescription)
+            .then(result=>{
+                this.setState({
+                    techDescription:result[0]['technology_desc'],
+                });
+            })
     }
 
     render() {
@@ -44,7 +52,7 @@ class Analysis extends Component {
                             </ResponsiveContainer>
                         </Col>
                         <Col lg={6} md={12} sm={12} >
-                            <p className="text-justify analysisDescription" >{this.state.subTitle}</p>
+                            <p className="text-justify analysisDescription" >{this.state.techDescription}</p>
                         </Col>
                     </Row>
                 </Container>
