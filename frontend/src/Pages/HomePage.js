@@ -21,6 +21,7 @@ class HomePage extends Component {
                 <TopNavigation title="Home" />
                 <TopBanner/>
                 <Services/>
+                
                 <Analysis/>
                 <Summary/>
                 <RecentProject/>
