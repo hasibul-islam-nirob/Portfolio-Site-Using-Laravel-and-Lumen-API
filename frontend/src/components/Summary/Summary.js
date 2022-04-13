@@ -4,8 +4,29 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCheckCircle} from "@fortawesome/free-solid-svg-icons";
 import CountUp from 'react-countup';
 import VisibilitySensor from "react-visibility-sensor";
+import RestGetClient from "../../RestApi/RestClient";
+import AppURL from "../../RestApi/AppUrl";
 
 class Summary extends Component {
+
+    constructor() {
+        super();
+        this.state={
+            client:'',
+            project:''
+        }
+    }
+
+    componentDidMount() {
+        RestGetClient.GetRequest(AppURL.homeTitleSubTitle)
+            .then(result=>{
+                this.setState({
+                    project:result[0]['total_projects'],
+                    client:result[0]['total_clients']
+                });
+            })
+    }
+
     render() {
         return (
             <Fragment>
@@ -17,7 +38,7 @@ class Summary extends Component {
                                     <Row  className="countSection"  >
                                         <Col>
                                             <h1 className="countNumber" >
-                                                <CountUp start={0} end={1230}>
+                                                <CountUp start={0} end={this.state.project}>
                                                     {({ countUpRef, start }) => (
                                                         <VisibilitySensor onChange={start} delayedCall >
                                                             <span ref={countUpRef} />
@@ -30,7 +51,7 @@ class Summary extends Component {
                                         </Col>
                                         <Col>
                                             <h1 className="countNumber" >
-                                                <CountUp start={0} end={765}>
+                                                <CountUp start={0} end={this.state.client}>
                                                     {({ countUpRef, start }) => (
                                                         <VisibilitySensor onChange={start} delayedCall >
                                                             <span ref={countUpRef} />
