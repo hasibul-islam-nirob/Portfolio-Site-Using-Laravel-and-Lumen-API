@@ -9,7 +9,7 @@ class RestGetClient {
             })
             .catch(error=>{
                 return error;
-            }); 
+            });
     }
 
     static  postRequest(postURL,postJSONData){
